@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
- "scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start"
-},
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
   "files": [
     "build"
   ],
@@ -16,15 +16,16 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
     "next": "15.2.4",
+    "node-fetch": "^3.3.2",
     "react": "^19",
     "react-dom": "^19",
-    "@modelcontextprotocol/sdk": "^1.0.4",
-    "node-fetch": "^3.3.2",
     "zod": "^3.24.1"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
+    "@types/react": "19.1.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2"
   }
