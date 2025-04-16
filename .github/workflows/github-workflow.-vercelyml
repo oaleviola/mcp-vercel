@@ -22,8 +22,10 @@ jobs:
       - name: Build MCP server
         run: npm run build
         
-      - name: Deploy to hosting provider
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }}
-        run: npx vercel --prod --token "$VERCEL_TOKEN"
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}  # Opcional se você usar conta pessoal
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}  # ID do projeto MCP na Vercel
+          working-directory: ./
